@@ -13,11 +13,11 @@
 
 
 {% block content %}
-    <form action="{% url 'WebblogQuestionPage' %}" method="post">
-        {% csrf_token %}
-        {% bootstrap_form form %}      
-        {{form.QuestionsForm}}
-        <input type="submit" value="submit">
+<form action="{% url 'WebblogQuestionPage' %}"  method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}      
+    {{form.QuestionsForm}}
+    <input type="submit" value="submit">
 
-    </form>
-{% endblock content %}
+</form>
+{% endblock content %} 
