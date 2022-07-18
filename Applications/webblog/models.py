@@ -25,3 +25,5 @@ class WebblogForm(ModelForm):
         model = WebblogFormModel
         fields = ('topic', 'content', 'name', 'email', 'post_date')
 
+
+    

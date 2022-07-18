@@ -1,5 +1,5 @@
 from django.urls import path
-from Applications.webblog.views import indexWebblog, seminarAWebblog, seminarBWebblog, seminarCWebblog, seminarDWebblog, tourismPhuket, researchSources, WebblogFormPage, WebblogFormDetailPage, DashBoardPage, DashBoardPageCovid
+from Applications.webblog.views import indexWebblog, seminarAWebblog, seminarBWebblog, seminarCWebblog, seminarDWebblog, tourismPhuket, researchSources, WebblogQuestionPage, WebblogAnswerFromQuestionPage, WebblogFormPage, WebblogFormDetailPage, DashBoardPage, DashBoardPageCovid
 
 urlpatterns = [
     path('', indexWebblog, name='indexWebblog'),
@@ -9,6 +9,8 @@ urlpatterns = [
     path('seminarDWebblog/', seminarDWebblog, name='seminarDWebblog'),
     path('tourismPhuket/', tourismPhuket, name='tourismPhuket'),
     path('researchSources/', researchSources, name='researchSources'),
+    path('WebblogQuestionPage/', WebblogQuestionPage, name='WebblogQuestionPage'),
+    path('WebblogAnswerFromQuestionPage/', WebblogAnswerFromQuestionPage, name='WebblogAnswerFromQuestionPage'), 
     path('WebblogFormPage/', WebblogFormPage, name='WebblogFormPage'),
     path('WebblogFormDetailPage/', WebblogFormDetailPage, name='WebblogFormDetailPage'),
     path('DashBoardPage/', DashBoardPage, name='DashBoardPage'),
