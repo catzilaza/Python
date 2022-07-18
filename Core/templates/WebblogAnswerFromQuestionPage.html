@@ -13,11 +13,14 @@
 
 
 {% block content %}
-<form action="{% url 'WebblogAnswerFromQuestionPage' %}"  method="post">
-    {% csrf_token %}
-    {% bootstrap_form form %}      
-    {{form.QuestionsForm}}
-    <input type="submit" value="submit">
-
-</form>
+    
+    {% if form.is_valid %}
+        ข้อที่ 1   คำตอบ  : {{question1}} <br></br>
+                 บันทึก  :  {{memo1}}    <br></br>
+        ข้อที่ 2   คำตอบ  : {{question2}} <br></br>
+                 บันทึก  :  {{memo2}}    <br></br>
+        
+    {% else %}
+        เกิดข้อผิดพลาด
+    {% endif %}
 {% endblock content %} 

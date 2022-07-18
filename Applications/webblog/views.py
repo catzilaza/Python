@@ -148,14 +148,26 @@ def researchSources(request):
 
 def WebblogFQuestionPage(request):  
 
-  form = QuestionsForm(request.POST)  
+  context = {}
+  form = QuestionsForm(request.POST) 
+
+  if request.method == 'POST': 
+    question1 = request.POST.get('question1', None) 
+    memo1 = request.POST.get('memo1', None) 
+    question2 = request.POST.get('question2', None) 
+    memo2 = request.POST.get('memo2', None)
+    context = {'form':form, 'question1':question1, 'question2':question2,'memo1':memo1, 'memo2':memo2}
+    return render(request, 'WebblogAnswerFromQuestionPage.html', context)
+  else:
+    print('error')
+
   context = {'form':form}
   return render(request, 'WebblogFQuestionPage.html', context)
 
-def WebblogAnswerFromQuestionPage(request):
+def WebblogAnswerFromQuestionPage(request): 
 
+  context = {}
   form = QuestionsForm(request.POST)  
-  context = {'form':form}
   return render(request, 'WebblogAnswerFromQuestionPage.html', context)
 
 def WebblogFormPage(request):
