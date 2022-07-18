@@ -21,8 +21,7 @@ def indexWebblog(request):
                    {'pathPic': "webblogPics/picSeminar2.jpg", 'linkpage': "seminarDWebblog", 'content' : "สัมมนา 99711"},                   
                    {'pathPic': "webblogPics/pic3.jpg", 'linkpage': "tourismPhuket", 'content' : "แหล่งท่องเที่ยวจังหวัดภูเก็ต"},
                    {'pathPic': "webblogPics/picSeminar3.jpg", 'linkpage': "researchSources", 'content' : "แหล่งค้นคว้าวิจัย"},
-                   {'pathPic': "webblogPics/picForm.png", 'linkpage': "WebblogQuestionPage", 'content' : "แบบฟอร์มคำถาม"},
-                   {'pathPic': "webblogPics/picForm.png", 'linkpage': "WebblogAnswerFromQuestionPage", 'content' : "คำตอบจากแบบฟอร์มคำถาม"},
+                   {'pathPic': "webblogPics/picForm.png", 'linkpage': "WebblogQuestionPage", 'content' : "แบบฟอร์มคำถาม"},                   
                    {'pathPic': "webblogPics/picForm.png", 'linkpage': "WebblogFormPage", 'content' : "แบบฟอร์ม"},
                    {'pathPic': "webblogPics/picTable.png", 'linkpage': "WebblogFormDetailPage", 'content' : "Detail of Table"},
                    {'pathPic': "webblogPics/picDashBoard.png", 'linkpage': "DashBoardPage", 'content' : "DashBoardPage"},
@@ -151,13 +150,6 @@ def WebblogQuestionPage(request):
   form = QuestionsForm(request.POST)  
   context = {'form':form}
   return render(request, 'WebblogQuestionPage.html', context)
-
-def WebblogAnswerFromQuestionPage(request):
-
-  form = QuestionsForm(request.POST)  
-  context = {'form':form}
-  return render(request, 'WebblogAnswerFromQuestionPage.html', context)
-
 
 def WebblogFormPage(request):
 
